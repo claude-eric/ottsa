@@ -15,16 +15,10 @@ var server = http.createServer(function(req, res) {
     <head>\
     <title>Ottsa</title>\
     </head>\
-
     <body>\
-    <textarea id="story" name="story"\
-              rows="5" cols="33">\
-    Texte à synthétiser\
-    </textarea>\
+    <textarea id="story" name="story" rows="5" cols="33">Texte à synthétiser</textarea>\
     </body>\
-
     </html> \
-  
   ';
   
   
