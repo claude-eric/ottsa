@@ -10,7 +10,27 @@ var server = http.createServer(function(req, res) {
   ESpeak.speak("Hello world!");*/
   
   res.writeHead(200);
-  res.end('Salut tout le monde !');
+  
+  var html_content ='
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Ottsa</title>
+    </head>
+
+    <body>
+    <textarea id="story" name="story"
+              rows="5" cols="33">
+    Texte à synthétiser
+    </textarea>
+    </body>
+
+    </html> 
+  
+  ';
+  
+  
+  res.end(html_content);
 
 });
 server.listen(8080);
