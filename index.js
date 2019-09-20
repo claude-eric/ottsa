@@ -1,9 +1,10 @@
 var http = require('http');
-var ESpeak = require('node-espeak');
+//var ESpeak = require('node-espeak');
+var espeak = require('espeak');
 
 var generateWAVFile = function(){
  
-  var espeak = require('espeak');
+  
   
   // optionally set the path to the `espeak` cli program if it's not in your PATH
   //espeak.cmd = '/usr/bin/espeak';
