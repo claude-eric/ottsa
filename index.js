@@ -2,14 +2,14 @@ var http = require('http');
 //var ESpeak = require('node-espeak');
 var espeak = require('espeak');
 
-var generateWAVFile = function(){
+var generateWAVFile = function(ptext){
  
   
   
   // optionally set the path to the `espeak` cli program if it's not in your PATH
   //espeak.cmd = '/usr/bin/espeak';
 
-  espeak.speak('hello world', function(err, wav) {
+  espeak.speak(ptext, function(err, wav) {
     if (err) return console.error(err);
 
     // get the raw binary wav data
@@ -34,11 +34,14 @@ var server = http.createServer(function(req, res) {
   var html_content ='<!DOCTYPE html><html>\
     <head>\
     <title>Ottsa</title>\
+<script>\
+
+</script>\
     </head>\
     <body style="background-color:#50A0FF">\
     <h2>OTTSA</h2>\
     <textarea id="story" name="story" rows="5" cols="33">Texte à synthétiser</textarea>\
-  <input type="button" value="synthétiser la phrase" onclick="generateWAVFile()">\
+  <input type="button" value="Synthetiser la phrase" onclick="generateWAVFile(document.getElementById(\"story\").value)" />\
     <audio controls="controls">\
       <source src="chanson.ogg" type="audio/ogg" />\
       <source src="chanson.mp3" type="audio/mp3" />Votre navigateur ne supporte pas la balise AUDIO.</audio>\
