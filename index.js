@@ -17,6 +17,9 @@ var server = http.createServer(function(req, res) {
     </head>\
     <body>\
     <textarea id="story" name="story" rows="5" cols="33">Texte à synthétiser</textarea>\
+    <audio controls="controls">\
+      <source src="chanson.ogg" type="audio/ogg" />\
+      <source src="chanson.mp3" type="audio/mp3" />Votre navigateur ne supporte pas la balise AUDIO.</audio>\
     </body>\
     </html> \
   ';
