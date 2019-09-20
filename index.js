@@ -35,7 +35,6 @@ var server = http.createServer(function(req, res) {
     <head>\
     <title>Ottsa</title>\
 <script>\
-
 </script>\
     </head>\
     <body style="background-color:#50A0FF">\
