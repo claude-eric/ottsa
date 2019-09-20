@@ -15,7 +15,8 @@ var server = http.createServer(function(req, res) {
     <head>\
     <title>Ottsa</title>\
     </head>\
-    <body>\
+    <body style="background-color:#0050FF">\
+    <h2>OTTSA</h2>\
     <textarea id="story" name="story" rows="5" cols="33">Texte à synthétiser</textarea>\
     <audio controls="controls">\
       <source src="chanson.ogg" type="audio/ogg" />\
