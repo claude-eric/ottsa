@@ -1,5 +1,5 @@
 var http = require('http');
-//var ESpeak = require('node-espeak');
+var ESpeak = require('node-espeak');
 
 var server = http.createServer(function(req, res) {
   
